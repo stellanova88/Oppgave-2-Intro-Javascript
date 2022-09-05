@@ -1,5 +1,9 @@
-import './styles.css';
-import { users } from './util';
+// import './styles.css';
+// import 'src/styles.css';
+// import {add, #user} from 'src/styles.css';
+// import {add, module } from "./styles.css";
+// import {  } from "module";
+// import { users } from './util';
 
 // TODO: Hent HTML #id med getElementById
 const searchInput = '';
@@ -12,6 +16,8 @@ const createTableUI = (users) => {
   userUl.innerHTML += `<li><span>Id</span><span>Navn</span><span>Alder</span></li>`;
   // TODO: bruk for-of eller vanlig for-løkke og tempelate literals `` til å skrive ut listen med brukere
 };
+
+console.log("Hey")
 
 const handleSearch = () => {
   // TODO: Hent ut verdien fra søke input feltet
