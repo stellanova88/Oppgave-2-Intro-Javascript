@@ -11,13 +11,10 @@ function removeClick(){
     removeElement.remove();
 }
 
-
 // Oppgave 2
 
 const btnChange = document.querySelector("#change-btn");
-
 btnChange.addEventListener("click", changeClick);
-
 const changeElement = document.getElementById("change");
 
 function changeClick(){
@@ -99,8 +96,7 @@ const btnColor = document.querySelector("#color");
 btnColor.addEventListener("click", giveChildrenBorder);
 const listToColor = document.querySelector(".children");
 
-
-// listToColor.childNodes[1].style.border =" 2px solid red";
+// listToColor.childNodes[1].li.style.border =" 2px solid red";
 
 // console.log(listToColor.children.length);
 
@@ -108,9 +104,17 @@ function isEven(value){
     return !(value % 2);
 }
 
+const testli = document.getElementsByClassName("children")
+// testli[2].style.border =" 2px solid red"
+console.log(testli)
+
+
+
 function giveChildrenBorder(){
-    for (let i = 0; i < listToColor.children.length; i++){
-        console.log("hey");
+    for (let i = 1; i < listToColor.children.length+1; i++){
+        // console.log(listToColor.children)
+        console.log(listToColor.childNodes.li)
+        // console.log(i);
 
         listToColor.childNodes[i].style.border =" 2px solid red";
     }
