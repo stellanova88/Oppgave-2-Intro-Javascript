@@ -22,7 +22,7 @@ const filterInput = document.getElementById("age");
 const filterButton = document.getElementById("filter");
 const userUl = document.getElementById("users");
 
-console.log(searchInput)
+console.log(searchInput.value)
 
 const createTableUI = (users) => {
   userUl.innerHTML = null;
@@ -33,29 +33,27 @@ const createTableUI = (users) => {
     userUl.innerHTML += `<li><span>${user.id}</span><span>${user.name}</span><span>${user.age}</span></li>`;
     // console.log(i)
   }
-};
-
-
-
-
+}
 
 const handleSearch = () => {
   // TODO: Hent ut verdien fra søke input feltet
-  const searchName = '';
+  const searchName = searchInput;
   // TODO: Sjekk om searchName ekisterer
-  if ('') {
+  if (users.includes("searchInput")){
+    console.log("includes")
     // TODO: Bruk .find for å finne navnet til den brukeren som matcher søkeordet
     const searchResult = '';
     // TODO: Sjekk som resultatet eksisterer
+   }
     if ('') {
       // TODO: Oppdatere grensesnittet med createTableUI og resultatet av søket
     } else {
       // TODO: Oppdatere grensesnittet med userUl.innerHTML og en passende tekst når vi ikke finner noe
     }
-  } else {
-    // TODO: Hvis ingen søkeord vis default liste med brukere via createTableUI
-  }
-};
+    //   else {
+    //   // TODO: Hvis ingen søkeord vis default liste med brukere via createTableUI
+    // }
+}
 
 const handleFilter = () => {
   // TODO: Hent ut verdien fra filter input feltet
@@ -83,3 +81,5 @@ main();
 
 // TODO: Lytt til tastatur klikk på søkefeltet, den skal trigge søkefunksjonen (handleSearch)
 // TODO: Lytt til klikk på filter-knappen, den skal trigge filterfunksjonen (handleFilter)
+searchInput.addEventListener('keyup', handleSearch);
+filterButton.addEventListener('click', handleFilter);
