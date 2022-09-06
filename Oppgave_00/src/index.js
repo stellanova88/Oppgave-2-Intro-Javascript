@@ -25,6 +25,8 @@ function changeClick(){
 
 const inputbox = document.querySelector("#input");
 
+
+
 inputbox.addEventListener("keypress", inputText);
 const textBox = document.getElementById("input-text");
 
@@ -33,7 +35,7 @@ function inputText(){
     textBox.innerHTML = newText;
 }
 
-// Prøver å gjøre det samme med en arrow function, men det fungerer ikke????
+// Arrow funksjoner bruker ikke hoisting, så funksjonen må settes opp før den brukes i nye JS
 // const inputText = () => {
 //     let newText = inputbox.value;
 //     textBox.innerHTML = newText;

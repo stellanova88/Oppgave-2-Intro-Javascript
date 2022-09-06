@@ -1,23 +1,43 @@
-// import './styles.css';
-// import 'src/styles.css';
-// import {add, #user} from 'src/styles.css';
-// import {add, module } from "./styles.css";
-// import {  } from "module";
-// import { users } from './util';
+import { users } from './util.js';
+console.log("Start")
+
+// console.log(users)
+// const users = [
+//   { id: 0, name: "Trude", age: 77 },
+//   { id: 1, name: "Simen", age: 85 },
+//   { id: 2, name: "Lars", age: 99 },
+//   { id: 3, name: "Ali", age: 34 },
+//   { id: 4, name: "Finn", age: 60 },
+//   { id: 5, name: "Kåre", age: 70 },
+//   { id: 6, name: "Hanne", age: 20 },
+//   { id: 7, name: "Åse", age: 21 },
+//   { id: 8, name: "Anne", age: 6 },
+//   { id: 9, name: "Amanda", age: 31 },
+//   { id: 10, name: "Morgan", age: 87 }
+// ];
 
 // TODO: Hent HTML #id med getElementById
-const searchInput = '';
-const filterInput = '';
-const filterButton = '';
-const userUl = '';
+const searchInput = document.getElementById("name")
+const filterInput = document.getElementById("age");
+const filterButton = document.getElementById("filter");
+const userUl = document.getElementById("users");
+
+console.log(searchInput)
 
 const createTableUI = (users) => {
   userUl.innerHTML = null;
   userUl.innerHTML += `<li><span>Id</span><span>Navn</span><span>Alder</span></li>`;
-  // TODO: bruk for-of eller vanlig for-løkke og tempelate literals `` til å skrive ut listen med brukere
+  // TODO: bruk for-of eller vanlig for-løkke og tempelate literals `` 
+  // til å skrive ut listen med brukere
+  for (let user of users){
+    userUl.innerHTML += `<li><span>${user.id}</span><span>${user.name}</span><span>${user.age}</span></li>`;
+    // console.log(i)
+  }
 };
 
-console.log("Hey")
+
+
+
 
 const handleSearch = () => {
   // TODO: Hent ut verdien fra søke input feltet
